@@ -47,4 +47,6 @@ int main(int argc, char **argv) {
 
     netTakeHomePay = grossPay - socialSecurityTaxValue - federalIncomeTaxValue - stateIncomeTaxValue - MEDICAL_INSURANCE;
     cout << "Net take-home pay for the week $" << netTakeHomePay << endl;
+
+    return 0;
 }
