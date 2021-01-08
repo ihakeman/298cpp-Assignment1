@@ -17,11 +17,11 @@ int main(int argc, char **argv) {
 
     if (diffCapacityAndAttending >= 0) {//if difference is positive or zero, it is legal
         cout << "It is legal to hold the meeting." << endl;
-        cout << diffCapacityAndAttending << " more people can legally attend." << endl;
+        cout << "Number of additional people who can legally attend: " << diffCapacityAndAttending << endl;
     }
     else {
         cout << "The meeting cannot be held as planned due to fire regulations." << endl;
-        cout << -diffCapacityAndAttending << " people must be excluded in order to meet the fire regulations." << endl;//negative difference since the value of the variable is negative if it got to this code block
+        cout << "Number of people who must be excluded in order to meet the fire regulations: " << -diffCapacityAndAttending << endl;//negative difference since the value of the variable is negative if it got to this code block
     }
 
     return 0;
