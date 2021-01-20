@@ -11,6 +11,7 @@ int main(int argc, char **argv) {
     const float FEDERAL_INCOME_TAX = 0.14;//percentage
     const float STATE_INCOME_TAX = 0.05;//percentage
     const float MEDICAL_INSURANCE = 10.00;//flat rate
+    //shorts used since hours will always be from 0 to 168, so float is all that is needed
     short hoursWorked = 0;//set to zero then updated later by user input
     short regularHoursWorked = 0;//updated later if necessary
     short overtimeHoursWorked = 0;//updated later if necessary
@@ -32,7 +33,7 @@ int main(int argc, char **argv) {
     }
 
     grossPay = (regularHoursWorked * HOURLY_PAY) + (overtimeHoursWorked * OVERTIME_PAY);
-    cout << "Gross Pay for the week: $" << fixed << setprecision(2) << grossPay << endl;
+    cout << "Gross Pay for the week: $" << fixed << setprecision(2) << grossPay << endl;//fixed<<setprecision sets the output precision of all doubles for the whole file
 
     socialSecurityTaxValue = grossPay * SOCIAL_SECURITY;//total pay times percentage
     cout << "Social Security Tax: $" << socialSecurityTaxValue << endl;
@@ -43,10 +44,10 @@ int main(int argc, char **argv) {
     stateIncomeTaxValue = grossPay * STATE_INCOME_TAX;
     cout << "State Income Tax: $" << stateIncomeTaxValue << endl;
 
-    cout << "Medical Insurance Withheld $" << MEDICAL_INSURANCE << endl;//constant rate of 10.00
+    cout << "Medical Insurance Withheld: $" << MEDICAL_INSURANCE << endl;//constant rate of 10.00
 
     netTakeHomePay = grossPay - socialSecurityTaxValue - federalIncomeTaxValue - stateIncomeTaxValue - MEDICAL_INSURANCE;
-    cout << "Net take-home pay for the week $" << netTakeHomePay << endl;
+    cout << "Net take-home pay for the week: $" << netTakeHomePay << endl;
 
     return 0;
 }
