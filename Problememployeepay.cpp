@@ -5,7 +5,7 @@ using namespace std;
 
 int main(int argc, char **argv) {
     const float HOURLY_PAY = 16.00;//constants since they don't change in the program, float since that is all that is needed memory-wise
-    const short REGULAR_HOURS = 40;//assumed number of hours in regular work week since not given, change here otherwise
+    const short REGULAR_HOURS = 40;
     const float OVERTIME_PAY = HOURLY_PAY * 1.5;
     const float SOCIAL_SECURITY = 0.06;//percentage
     const float FEDERAL_INCOME_TAX = 0.14;//percentage
